@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for f in $(ls *.cpp); do
+  base=${f%.cpp}
+  echo "Compiling $f as $base"
+  g++ -std=c++14 $f -o $base
+done
